@@ -1,0 +1,60 @@
+
+Project 3
+MSBD 6000B
+
+    Team Forming:
+        Each team will have at most five members.
+        After forming the team, please fill the table inclduing team members' github account and student IDs.
+        Eeach team member need to commit the codes by using own github account
+        Please upload the report to the github
+    There are three options for project 3 and each team is required to choose one option for project 3.
+
+Option 1
+
+    You need to implement the optimization method in the paper "Training Neural Networks without Gradients: A Scalable ADMM Approach".
+    The layers in the deep neural networks should at least include the convolution, pooling, and ReLU layers.
+    You need to compare the method you implement with the standard backpropagation method on some benchmark image datasets.
+    The source codes should be uploaded to github.
+    You need to write a report to describe the details of your implementation and the comparison results. The report should be put in github.
+
+Option 2
+
+    Breast cancer is the most common cancer in women worldwide. In this project, you are required to classify the x-ray images into normal and abnormal to help detect the cancer.
+    There are two data sets for the project on the Dropbox: Dataset_A.zip  Dataset_B.zip
+    Please refer to the Readme file in the dataset for the information you need.
+    Multi-instance classification
+        Each medical image has much higher resolution than natural images, so it is hard to store such big feature mappings in the GPU. Since resizing the image may lose some important details, you need to devide the image into many patches. By regarding each patch as a instance, you can use image-level labels to conduct deep multi-instance learning.
+        Only the Dataset_A is used in this task.
+        Except downsampling the images, any additional pre- or post-processing on the training set is allowed.
+        Suggested reference: Patch-based Convolutional Neural Network for Whole Slide Tissue Image Classification, CVPR 2016.
+        Coupon will be given if you improve the mentioned method or develop your own solution.
+    Grading will be based on the testing accuracy, please upload the predicted results of both tasks in csv format.
+    The source codes should be uploaded to github.
+    You need to write a report to describe the details of your implementation and the report should be put in github.
+
+Option 3
+
+    Use the same data as option 2.
+    Domain Adaptation.
+        Different x-ray devices have different image qualities and resolutions. Therefore, the model trained on the dataset from one device may fail to predict on the dataset from another device. In this situation, domain adaptation helps address the problem of differences between the two datasets.
+        Both datasets are needed in this task: Dataset_A works as the source and Dataset_B works as the target.
+        Any additional pre- or post-processing on the training set is allowed including downsampling.
+        You can choose to use standard classification, multi-instance learning or multi-view learning as the base model:
+            reference for multi-instance learning: Deep multi-instance networks with sparse label assignment for whole mammogram classification, MICCAI (3) 2017
+            reference for multi-view learning: High-Resolution Breast Cancer Screening with Multi-View Deep Convolutional Neural Networks, arxiv 2017
+        At the first step, you need to use the finetune to do supervised domain adaptation first.
+        At the second step, if you choose the standard classification as the base model, each team need to implement at least TWO of the following unspervised domain adaptation methods where labels in the training data of the target domain cannot be used; otherwise, you need to implement at least ONE of the abovementioned unsupervised domain adaptation methods.
+            MMD: Deep Domain Confusion: Maximizing for Domain Invariance
+            Gradient Reverse: Unsupervised Domain Adaptation by Backpropagation. ICML 2015
+            Adversarial Training: Adversarial Discriminative Domain Adaptation. CVPR 2017
+            Generate to adapt: Unsupervised Pixel-Level Domain Adaptation with Generative Adversarial Networks. CVPR 2017
+            Cycle GAN: Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks. ICCV 2017
+        Coupon will be given if you try more unspervised domain adaptation solutions than required or combine different base models.
+    Grading will be based on the testing accuracy, please upload the predicted results of both tasks in csv format.
+    The source codes should be uploaded to github.
+    You need to write a report to describe the details of your implementation and the report should be put in github.
+
+    Due date: 11:59pm, Dec 15, 2017.
+    For enquries, please contact the TA, Weiyan Wang, via wwangbc@cse.ust.hk before the deadline.
+
+

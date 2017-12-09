@@ -23,6 +23,14 @@
   <ItemGroup>
     <Compile Include="Project3.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProjectDetails.txt" />
+    <Content Include="README.txt" />
+    <Content Include="Readme2.txt" />
+    <Content Include="test.txt" />
+    <Content Include="train.txt" />
+    <Content Include="val.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
