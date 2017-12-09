@@ -56,7 +56,7 @@ def train(epochs) :
     y_test = []
     name_test = []
 
-    trainData = np.loadtxt("./train.txt", dtype="str", delimiter='  ' );
+    trainData = np.loadtxt("./train.txt", dtype="str", delimiter='\t' );
     for k in range(len(trainData)) :
         aLine = trainData[k];
         image_path = filePrefixWith(dataFolder, aLine[0]);
@@ -73,7 +73,7 @@ def train(epochs) :
 
 
 
-    trainData = np.loadtxt("./test.txt", dtype="str", delimiter='   ' );
+    trainData = np.loadtxt("./test.txt", dtype="str",  delimiter='\t' );
     for k in range(len(trainData)) :
         aLine = trainData[k];
         image_path = filePrefixWith(dataFolder, aLine);
@@ -92,7 +92,7 @@ def train(epochs) :
     Y_train = np.array(y_train)
     X_test = np.array(X_test)
 
-    model = MobileNet(include_top=True,weights='imagenet', classes = class_count);
+    model = MobileNet(include_top=True,weights=None, classes = class_count);
 
     # 8. Compile model
     model.compile(loss='categorical_crossentropy',
